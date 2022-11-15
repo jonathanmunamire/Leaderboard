@@ -1,7 +1,10 @@
-body {
-    background-color: bisque;
+.pages {
+    display: flex;
+    gap: 5rem;
 }
 
-.hello {
-    color: red;
-  }
+.score_page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
