@@ -1,14 +1,16 @@
-import _ from 'lodash';
 import './style.css';
+import addScore from './modules/add.js';
 
+const nameInput = document.querySelector('.name_input');
+const scoreInput = document.querySelector('.score_input');
+const submit = document.querySelector('.submit_button');
 
-function component() {
-    const element = document.createElement('div');
+const cleanInput = () => {
+  nameInput.value = '';
+  scoreInput.value = '';
+};
 
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+submit.addEventListener('click', () => {
+  addScore();
+  cleanInput();
+});
