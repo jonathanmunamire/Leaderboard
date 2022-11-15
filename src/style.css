@@ -8,3 +8,17 @@
     flex-direction: column;
     gap: 2rem;
 }
+
+.scores_container {
+    border: 2px solid black;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd){
+    background-color: rgb(233, 233, 233);
+}
+
+tr:nth-child(even){
+    background-color: #fff;
+}
