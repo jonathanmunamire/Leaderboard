@@ -1,20 +1,27 @@
-const addScore = () => {
-  const nameInput = document.querySelector('.name_input');
-  const scoreInput = document.querySelector('.score_input');
-  const errorMessage = document.querySelector('.error_message');
-  if (nameInput.value === '' || scoreInput.value === '') {
-    errorMessage.innerHTML = 'Add Input';
-    setTimeout(() => {
-      errorMessage.innerHTML = '';
-    }, 2000);
-  } else {
-    const table = document.querySelector('.scores_container');
-    const row = document.createElement('tr');
-    const data = document.createElement('td');
-    data.innerHTML = `${nameInput.value} : ${scoreInput.value}`;
-    row.appendChild(data);
-    table.appendChild(row);
-  }
-};
+const API_KEY = "gMaGSzDmg04MJQsCUpvH";
 
-export default addScore;
+const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${API_KEY}/scores`;
+
+ export const getScore = ()=>{
+  fetch(url, 
+    {
+      method: "GET"
+    })
+  
+    .then(res => res.json())
+    .then(data => {
+      document.querySelector('.scores_container').innerHTML = ''
+       return data.result.forEach((element) => {
+
+            const table = document.querySelector('.scores_container');
+            const row = document.createElement('tr');
+            const data = document.createElement('td');
+            data.innerHTML = `${element.user} : ${element.score}`;
+            row.appendChild(data);
+            table.appendChild(row);
+
+        });
+    })
+}
+
+export {url};
