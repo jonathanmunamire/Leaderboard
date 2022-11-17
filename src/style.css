@@ -10,6 +10,7 @@ body {
   color: #fff;
   text-align: center;
 }
+
 .pages {
   display: flex;
   flex-direction: row;
@@ -21,28 +22,28 @@ body {
 }
 
 .refresh_button {
-  height: fit-content;
+  height: 2.5rem;
   width: fit-content;
   padding: 1% 1% 1% 1%;
   margin-left: 3%;
   font-family: "poppins", sans-serif;
   font-weight: 500;
   border: 2px solid #fff;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   background-color: #1f2b64;
   color: #fff;
 }
 
 .refresh_button:hover {
   border: 2px solid #fff;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   background-color: #fff;
   color: #1f2b64;
 }
 
 .refresh_button:active {
   border: 2px solid #fff;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   background-color: #1f2b64;
   color: #fff;
 }
@@ -56,7 +57,7 @@ body {
 }
 
 .scores_container {
-  box-shadow: .5px .5px 15px black;
+  box-shadow: 0.5px 0.5px 15px black;
   margin-top: 7%;
   width: 45vw;
   border-collapse: collapse;
@@ -99,28 +100,28 @@ td {
 
 .submit_button {
   justify-self: flex-start;
-  height: fit-content;
+  height: 2.5rem;
   width: fit-content;
   padding: 2% 2% 2% 2%;
   margin-left: 5%;
   font-family: "poppins", sans-serif;
   font-weight: 500;
   border: 2px solid #fff;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   background-color: #1f2b64;
   color: #fff;
 }
 
 .submit_button:hover {
   border: 2px solid #fff;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   background-color: #fff;
   color: #1f2b64;
 }
 
 .submit_button:active {
   border: 2px solid #fff;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   background-color: #1f2b64;
   color: #fff;
 }
@@ -131,7 +132,7 @@ td {
   font-weight: 700;
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
   .form_page {
     display: flex;
     flex-direction: column;
@@ -141,7 +142,7 @@ td {
   }
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
   .form_page {
     display: flex;
     flex-direction: column;
@@ -151,7 +152,7 @@ td {
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .pages {
     display: flex;
     flex-direction: column-reverse;
@@ -182,7 +183,7 @@ td {
   }
 
   .scores_container {
-    box-shadow: .5px .5px 15px black;
+    box-shadow: 0.5px 0.5px 15px black;
     margin-top: 7%;
     border-collapse: collapse;
     width: 70vw;
@@ -191,7 +192,7 @@ td {
   }
 }
 
-@media (max-width: 550px){
+@media (max-width: 550px) {
   .pages {
     display: flex;
     flex-direction: column-reverse;
@@ -222,7 +223,7 @@ td {
   }
 
   .scores_container {
-    box-shadow: .5px .5px 15px black;
+    box-shadow: 0.5px 0.5px 15px black;
     margin-top: 7%;
     border-collapse: collapse;
     width: 80vw;
