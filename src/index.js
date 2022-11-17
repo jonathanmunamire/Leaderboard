@@ -1,5 +1,5 @@
 import './style.css';
-import { postScore } from "./modules/post.js"
+import postScore from './modules/post.js';
 import { getScore } from './modules/add.js';
 
 const button = document.querySelector('.refresh_button');
@@ -8,9 +8,14 @@ const submit = document.querySelector('.submit_button');
 const nameInput = document.querySelector('.name_input');
 const scoreInput = document.querySelector('.score_input');
 
-button.addEventListener('click', ()=>{
-    getScore()
-})
+button.addEventListener('click', () => {
+  getScore();
+});
+
+const cleanInput = () => {
+  nameInput.value = '';
+  scoreInput.value = '';
+};
 
 submit.addEventListener('click', () => {
   const errorMessage = document.querySelector('.error_message');
@@ -24,9 +29,4 @@ submit.addEventListener('click', () => {
   }
 
   cleanInput();
-  }); 
-
-  const cleanInput = () => {
-    nameInput.value = '';
-    scoreInput.value = '';
-  };
+});
