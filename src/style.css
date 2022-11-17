@@ -1,24 +1,232 @@
-.pages {
-  display: flex;
-  gap: 5rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+body {
+  padding: 0% 0% 0% 0%;
+  font-family: "poppins", sans-serif;
+  background-color: #1f2b64;
 }
 
-.score_page {
+.title {
+  color: #fff;
+  text-align: center;
+}
+.pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.scores_page {
+  color: #fff;
+}
+
+.refresh_button {
+  height: fit-content;
+  width: fit-content;
+  padding: 1% 1% 1% 1%;
+  margin-left: 3%;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  border: 2px solid #fff;
+  border-radius: .4rem;
+  background-color: #1f2b64;
+  color: #fff;
+}
+
+.refresh_button:hover {
+  border: 2px solid #fff;
+  border-radius: .4rem;
+  background-color: #fff;
+  color: #1f2b64;
+}
+
+.refresh_button:active {
+  border: 2px solid #fff;
+  border-radius: .4rem;
+  background-color: #1f2b64;
+  color: #fff;
+}
+
+.form_page {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  color: #fff;
+  width: 25vw;
 }
 
 .scores_container {
-  border: 2px solid black;
-  width: 100%;
+  box-shadow: .5px .5px 15px black;
+  margin-top: 7%;
+  width: 45vw;
   border-collapse: collapse;
 }
 
-tr:nth-child(odd) {
-  background-color: rgb(233, 233, 233);
+tr:nth-child(even) {
+  background-color: #1f2b64;
+  color: #fff;
 }
 
-tr:nth-child(even) {
+tr:nth-child(odd) {
   background-color: #fff;
+  color: #1f2b64;
+}
+
+td {
+  padding-left: 2%;
+}
+
+.name_input,
+.score_input {
+  height: 6vh;
+  font-family: "poppins", sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  padding-left: 5%;
+  color: #1f2b64;
+}
+
+.name_input::-webkit-input-placeholder,
+.score_input::-webkit-input-placeholder {
+  color: #1f2b64;
+}
+
+.button_container {
+  display: flex;
+  flex-direction: row;
+}
+
+.submit_button {
+  justify-self: flex-start;
+  height: fit-content;
+  width: fit-content;
+  padding: 2% 2% 2% 2%;
+  margin-left: 5%;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  border: 2px solid #fff;
+  border-radius: .4rem;
+  background-color: #1f2b64;
+  color: #fff;
+}
+
+.submit_button:hover {
+  border: 2px solid #fff;
+  border-radius: .4rem;
+  background-color: #fff;
+  color: #1f2b64;
+}
+
+.submit_button:active {
+  border: 2px solid #fff;
+  border-radius: .4rem;
+  background-color: #1f2b64;
+  color: #fff;
+}
+
+.error_message {
+  margin-left: 10%;
+  color: rgb(255, 58, 58);
+  font-weight: 700;
+}
+
+@media (max-width: 1100px){
+  .form_page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #fff;
+    width: 30vw;
+  }
+}
+
+@media (max-width: 900px){
+  .form_page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #fff;
+    width: 35vw;
+  }
+}
+
+@media (max-width: 768px){
+  .pages {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  .form_page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #fff;
+    width: 50vw;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    text-align: center;
+  }
+
+  .form_page h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .scores_page {
+    color: #fff;
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .scores_container {
+    box-shadow: .5px .5px 15px black;
+    margin-top: 7%;
+    border-collapse: collapse;
+    width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+}
+
+@media (max-width: 550px){
+  .pages {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  .form_page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #fff;
+    width: 60vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    text-align: center;
+  }
+
+  .form_page h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .scores_page {
+    color: #fff;
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .scores_container {
+    box-shadow: .5px .5px 15px black;
+    margin-top: 7%;
+    border-collapse: collapse;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
 }

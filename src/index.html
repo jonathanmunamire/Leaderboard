@@ -6,18 +6,20 @@
     <title>Leaderboard</title>
   </head>
   <body>
-    <h1>Leaderboard</h1>
+    <h1 class="title">Leaderboard</h1>
     <div class="pages">
       <div class="scores_page">
         <h2>Recent Scores <button class="refresh_button">Refresh</button></h2>
         <table class="scores_container"></table>
       </div>
-      <div class="score_page">
+      <div class="form_page">
         <h2>Add your Score</h2>
         <input type="text" class="name_input" placeholder="Your Name" />
         <input type="text" class="score_input" placeholder="Your Score" />
-        <button type="submit" class="submit_button">Submit</button>
-        <span class="error_message"></span>
+        <div class="button_container">
+          <button type="submit" class="submit_button">Submit</button>
+          <span class="error_message"></span>
+        </div>
       </div>
     </div>
   </body>
