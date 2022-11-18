@@ -132,6 +132,10 @@ td {
   font-weight: 700;
 }
 
+.success {
+  color: rgb(1, 160, 1);
+}
+
 @media (max-width: 1100px) {
   .form_page {
     display: flex;

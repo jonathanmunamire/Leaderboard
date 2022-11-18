@@ -20,12 +20,18 @@ const cleanInput = () => {
 submit.addEventListener('click', () => {
   const errorMessage = document.querySelector('.error_message');
   if (nameInput.value === '' || scoreInput.value === '') {
-    errorMessage.innerHTML = 'Add Input *';
+    errorMessage.innerHTML = 'Add Input';
+    errorMessage.classList.remove('success');
     setTimeout(() => {
       errorMessage.innerHTML = '';
     }, 3000);
   } else {
     postScore();
+    errorMessage.innerHTML = 'Score Added';
+    errorMessage.classList.add('success');
+    setTimeout(() => {
+      errorMessage.innerHTML = '';
+    }, 3000);
   }
 
   cleanInput();
