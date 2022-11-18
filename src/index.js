@@ -20,10 +20,10 @@ const cleanInput = () => {
 submit.addEventListener('click', () => {
   const errorMessage = document.querySelector('.error_message');
   if (nameInput.value === '' || scoreInput.value === '') {
-    errorMessage.innerHTML = 'Add Input';
+    errorMessage.innerHTML = 'Add Input *';
     setTimeout(() => {
       errorMessage.innerHTML = '';
-    }, 2000);
+    }, 3000);
   } else {
     postScore();
   }
