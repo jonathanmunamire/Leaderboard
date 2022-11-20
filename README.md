@@ -42,11 +42,11 @@ To get a local copy up and running follow these simple example steps.
 
 - Next Thing you need to do is to add the key you just got to your project url where you will perform the **POST** and **GET** requests
 
-### GET REQUEST WITH FETCH API
+### GET Request With Fetch API
 
 - Set your fetch this way or anyway you usually do, but remember to have the `{ method: "GET" }` after your **URL** `fetch(url, { method: "GET" } ) .then(res=> res.json()) .then(data => { // Perform Any action you want to do with the data here, make it display to your DOM return console.log(data)})`
 
-### POST REQUEST WITH FETCH API
+### POST Request With Fetch API
 
 - To make a post request to create a score for a new user use this code for fetch ` fetch(url, { method: "POST", headers:{"Content-Type": "application/json"}, body: JSON.stringify(payloadObject) }) .then((res)=> { return res.json()}) .then(data => { console.log("Data",data)}) .catch(error=> console.log(error))` customize the code the way you usually write your code.
 
